@@ -12,20 +12,20 @@ import javax.persistence.Table;
 public class Car {
 
 	@Id
-	@Column
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column
 	private long id;
 	@Column
 	private String name;
 	@Column
-	private int year;
+	private Integer year;
 	@Column
 	private String color;
 
 	public Car() {
 	}
 
-	public Car(String name, int year, String color) {
+	public Car(String name, Integer year, String color) {
 		this.name = name;
 		this.year = year;
 		this.color = color;
@@ -39,11 +39,11 @@ public class Car {
 		this.name = name;
 	}
 
-	public int getYear() {
+	public Integer getYear() {
 		return year;
 	}
 
-	public void setYear(int year) {
+	public void setYear(Integer year) {
 		this.year = year;
 	}
 
